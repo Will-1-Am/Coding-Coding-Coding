@@ -10,3 +10,9 @@ https://stackoverflow.com/questions/6662395/xcode-intellisense-meaning-of-letter
 # JSON Editor
 Courtesy of #LondonAppBrewer this little gem of a link will bring clarity to the JSON objects you work with. 
 http://jsoneditoronline.org/
+
+# Swift development tutorial 
+https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/
+
+# Apple developer archive
+https://developer.apple.com/library/archive/navigation/
