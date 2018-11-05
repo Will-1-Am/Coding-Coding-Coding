@@ -1,5 +1,8 @@
 # Swift
 
+# Rounding numbers and manipulating data types
+Discovered the rounded() instance method today (https://developer.apple.com/documentation/swift/floatingpoint/2295900-rounded#discussion) and how creating a constant can allow the casting of data types more easily.
+
 # Why "override func"? Overriding declaration requires an 'override' keyword.  - 
 Answer: https://docs.swift.org/swift-book/LanguageGuide/Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-ID196
 
