@@ -1,5 +1,8 @@
 # Swift
 
+# Code block highlighting
+Double-clicking on a curly bracket in Xcode 10 highlights the affected block of code.  Cool!
+
 # Rounding numbers and manipulating data types
 Discovered the rounded() instance method today (https://developer.apple.com/documentation/swift/floatingpoint/2295900-rounded#discussion) and how creating a constant can allow the casting of data types more easily.
 
