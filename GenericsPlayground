@@ -1,0 +1,20 @@
+//You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+//
+//The type of a and x can be String or Int.
+//
+//Return true if the array contains the value, false if not.
+
+//https://www.raywenderlich.com/722-swift-generics-tutorial-getting-started
+
+import UIKit
+
+protocol Summable { static func +(lhs: Self, rhs: Self) -> Self }
+extension Int: Summable {}
+extension Double: Summable {}
+
+func add<T: Summable>(x: T, y: T) -> T {
+    return x + y
+}
+
+let addIntSum = add(x: 1, y: 2) // 3
+let addDoubleSum = add(x: 1.0, y: 2.0) // 3
