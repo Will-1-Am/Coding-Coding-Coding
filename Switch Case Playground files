@@ -1,0 +1,97 @@
+import UIKit
+
+// Personalized greeting
+//
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+//
+// Use conditionals to return the proper message:
+//
+// case                 return
+// name equals owner    'Hello boss'
+// otherwise            'Hello guest'
+//https://www.hackingwithswift.com/files/pro-swift-sample.pdf
+//
+
+
+var str = "Hello, playground"
+let name = "fourCandles"
+
+switch name {
+case "ronnie":
+    print("Hello, Ronnie Barker!")
+    
+case "fourCandles":
+    print("Hello, Ronnie Corbett!")
+default:
+    print( "Autentication failed")
+}
+
+//Matching two values
+
+let password = "C0rb3tt"
+let ipAddress = "192.168.0.1"
+
+let authentication = (name, password, ipAddress)
+
+switch authentication {
+//case (_, _, _):  //using "_" for all values will not allow matching of any of the other cases
+//    print("You could be anybody!")
+case ("ronnie", "b@rk3r", _): //"_" here means that the third value is not required for a match
+    print("Hello, Ronnie Barker!")
+case ("fourCandles", let password, _): //the let keyword allows a value to be recovered
+    print("Hello, Ronnie Corbett your password was \(password)")
+default:
+    print("Who are you?")
+}
+
+//Using claculated values
+
+func foxTrot(number: Int) -> String{
+    switch (number % 7 == 0, number % 11 == 0) {
+    case (true, true):
+        return "You win FoxTrot"
+    case (true, false):
+        return "Fox"
+    case (false, true):
+        return "Trot"
+    case (false, false):
+        let badTry = String(number)
+        return badTry + " is not a winning number.  Try again."
+    }
+}
+print (foxTrot(number: 2))
+
+
+// Creating and looping through an array
+
+let fourCandles = (name: "fourCandles", password: "C0rb3tt")
+let ronnie = (name: "ronnie", password: "b@rk3r")
+let fred = (name: "wilma", password: "b@m8@m")
+
+let users = [fourCandles, ronnie, fred]
+
+for user in users {
+    print(user.name)
+}
+//a case can also be applied to a for loop to match specific criteria
+for case ("fourCandles", "C0rb3tt") in users {
+    print("fourCandles has the password \(password).")
+}
+//assigning the values to their individual constants
+for case (let name, let password) in users {
+    print("User \(name) has the password \(password)..")
+}
+
+//and more sucsinctly
+
+for case let (name, password) in users {
+    print("User \(name) has the password \(password)...")
+}
+
+//to filter on password and have a constant to manipulate
+for case let (name, "b@m8@m") in users {
+    print ("User \(name) has the password \"b@m8@m\"...." )
+}
+
+
+
