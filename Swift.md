@@ -1,5 +1,8 @@
 # Swift
 
+# Calculate the value of a number raised to a power.
+https://iswift.org/cookbook/calculate-power-of-a-number
+
 # Code block highlighting
 Double-clicking on a curly bracket in Xcode 10 highlights the affected block of code.  Cool!
 
